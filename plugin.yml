@@ -1,9 +1,0 @@
-name: FlyTime
-version: 1.0
-main: FlyTimePlugin
-commands:
-  flytime:
-    description: 给予玩家临时飞行权限。
-    usage: /<command> <玩家名> <分钟数>
-    permission: flytime.use
-    permission-message: 你没有使用这个命令的权限。
