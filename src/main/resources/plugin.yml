@@ -1,0 +1,12 @@
+name: FlyTimePlugin
+version: '1.0-SNAPSHOT'
+main: ogcl.fun.FlyTimePlugin
+api-version: '1.20'
+authors: [鹿茸茅草屋]
+description: 一个常用于我的世界生电服的插件，用于控制玩家的飞行时间（多用于菜单）
+commands:
+  flytime:
+    description: 给予玩家临时飞行权限。
+    usage: /<command> <分钟数> <玩家名>
+    permission: flytime.use
+    permission-message: 你没有使用这个命令的权限。
