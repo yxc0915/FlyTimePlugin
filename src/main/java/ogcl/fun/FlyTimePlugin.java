@@ -27,7 +27,12 @@ public class FlyTimePlugin extends JavaPlugin implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         getLogger().info("收到命令：" + cmd.getName()); // 添加日志输出
         if (cmd.getName().equalsIgnoreCase("flytime")) {
-            if (args.length < 2) {
+            if (!sender.isOp() && !(sender instanceof Player && sender.hasPermission("flytime.use"))) {
+                sender.sendMessage("您没有权限使用该命令！");
+                return true;
+            }
+
+            if (args.length != 2) {
                 sender.sendMessage("用法：/flytime <分钟数> <玩家名>");
                 return true;
             }
